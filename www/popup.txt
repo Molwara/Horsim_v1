@@ -1,0 +1,6 @@
+<div id="dataContent" data-role="popup">
+	<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+	<p>This is a completely basic popup, no options set.<p>
+</div>
+
+<a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="user">Profil</a>

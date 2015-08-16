@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		
+		<!-- jQuery CSS -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.4.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons-1.4.4.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.css">
+		
+		<!-- CSS -->
+		
+		
+        <title>Horsim</title>
+    </head>
+    <body>
+        <div id="app" data-role="page">
+        	<div id="statusbar" data-role="header" data-position="fixed" data-theme="b">
+            	<!-- <h1>Horsim</h1> -->
+				<div id="menubutton" style="width:25%;float:left">
+                    <div class="menubuttonDisplay" style="font-size:10px;float:left;padding-right:1em;padding-top:0.3em">Menü</div>
+                    <img src="images/icons-svg/bars-white.svg" alt="Menü">
+                </div>
+				
+                <div id="clock" style="width:25%;float:left">
+                    <div class="clockDisplay" style="font-size:10px;float:left;padding-right:1em;padding-top:0.3em">Uhr</div>
+					<img src="images/icons-svg/clock-white.svg" alt="Uhr">
+                </div>
+                
+                <div id="weather" style="width:25%;float:left">
+                    <div class="weatherDisplay" style="font-size:10px;float:left;padding-right:1em;padding-top:0.3em">Wetter</div>
+					<img src="images/icons-svg/cloud-white.svg" alt="Wetter">
+                </div>
+                
+                <div id="money" style="width:25%;float:left">
+                    <div class="moneyDisplay" style="font-size:10px;float:left;padding-right:1em;padding-top:0.3em">Geld</div>
+					<img src="images/icons-svg/info-white.svg" alt="Geld">
+                </div>
+                <!--
+                <div id="statusnav" data-role="navbar" data-iconpos="right">
+                    <ul>
+                        <li><button data-icon="clock">Uhr</button></li>
+                        <li><button data-icon="cloud">Wetter</button></li>
+                        <li><button data-icon="info">Geld</button></li>
+                    </ul>
+                </div>
+                -->
+            </div>
+			
+            <div id="maintabs" data-role="tabs">
+				
+            	<div id="mainnav" data-role="navbar" data-iconpos="left">
+                    <ul>
+                        <li><a href="#farm" data-icon="home" class="ui-btn-active">Hof</a></li>
+                        <li><a href="#country" data-icon="grid">Land</a></li>
+                        <li><a href="#town" data-icon="shop">Stadt</a></li>
+                        <li><a href="#tourney" data-icon="star">Turnier</a></li>
+                    </ul>
+                </div>
+				
+                <div id="farm" data-role="content" class="ui-content">
+                	<!-- <p>Ich bin im Hof</p> -->
+					
+					<div id="farmContent" style="width:100%;height:100%;overflow:hidden;">
+						<canvas id="farmCanvas" style="background-color:green">
+							Dieser Browser kann kein HTML5-canvas-Element darstellen
+						</canvas>
+						<a id="confirmButton" class="hidden" href="#" data-role="button" data-icon="check" data-iconpos="notext" data-theme="a">Okay</a>
+						<!-- <div class="buildItem pep" style="width:56px;height:56px;background-color:red;position:absolute;top:0;"></div> -->
+					</div>
+					
+					<div id="farmFooter" data-role="footer" data-position="fixed" data-tap-toggle="false">
+						<!-- <h4>Page footer</h4> -->
+						
+						<!-- Slider main container -->
+						<div class="swiper-container hidden">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<div class="buildItem" style="width:56px;height:56px;background-color:red;margin-top:0.8em;margin-bottom:0.5em;margin-left:auto;margin-right:auto;"></div>
+									<span>Slide 1</span>
+								</div>
+								<div class="swiper-slide">
+									<div class="buildItem" style="width:56px;height:56px;background-color:blue;margin-top:0.8em;margin-bottom:0.5em;margin-left:auto;margin-right:auto;"></div>
+									<span>Slide 2</span>
+								</div>
+								<div class="swiper-slide">
+									<div class="buildItem" style="width:56px;height:56px;background-color:yellow;margin-top:0.8em;margin-bottom:0.5em;margin-left:auto;margin-right:auto;"></div>
+									<span>Slide 3</span>
+								</div>
+								<div class="swiper-slide">
+									<div class="buildItem" style="width:56px;height:56px;background-color:magenta;margin-top:0.8em;margin-bottom:0.5em;margin-left:auto;margin-right:auto;"></div>
+									<span>Slide 4</span>
+								</div>
+								<div class="swiper-slide">
+									<div class="buildItem" style="width:56px;height:56px;background-color:cyan;margin-top:0.8em;margin-bottom:0.5em;margin-left:auto;margin-right:auto;"></div>
+									<span>Slide 5</span>
+								</div>
+								<div class="swiper-slide">
+									<div class="buildItem" style="width:56px;height:56px;background-color:orange;margin-top:0.8em;margin-bottom:0.5em;margin-left:auto;margin-right:auto;"></div>
+									<span>Slide 6</span>
+								</div>
+							</div>
+							
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+							
+							<!-- If we need scrollbar -->
+							<div class="swiper-scrollbar"></div>
+						</div>
+						
+						<div id="farmSubnav" data-role="navbar" data-iconpos="left">
+							<ul>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="user">Profil</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="mail">Büro</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="bullets">Pferde</a></li>
+								<li><a href="#" data-icon="gear" onclick="app.toggleBuildSwiper()">Bauen</a></li>
+							</ul>
+						</div>
+					</div>
+                </div>
+				
+                <div id="country" data-role="content" class="ui-content">
+                	<p>Ich bin auf dem Land</p>
+					
+					<div id="countryFooter" data-role="footer" data-position="fixed" data-tap-toggle="false">
+						<!-- <h4>Page footer</h4> -->
+						<div id="countrySubnav" data-role="navbar" data-iconpos="left">
+							<ul>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="user">Profil</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="shop">Versorgung</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="heart">Gelände</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="tag">Arzt</a></li>
+							</ul>
+						</div>
+					</div>
+                </div>
+				
+                <div id="town" data-role="content" class="ui-content">
+                	<p>Ich bin in der Stadt</p>
+					
+					<div id="townFooter" data-role="footer" data-position="fixed" data-tap-toggle="false">
+						<!-- <h4>Page footer</h4> -->
+						<div id="townSubnav" data-role="navbar" data-iconpos="left">
+							<ul>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="user">Profil</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="shop">Laden</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="bullets">Fahrzeuge</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="heart">Sponsoren</a></li>
+							</ul>
+						</div>
+					</div>
+                </div>
+				
+                <div id="tourney" data-role="content" class="ui-content">
+                	<p>Ich bin beim Turnier</p>
+					
+					<div id="tourneyFooter" data-role="footer" data-position="fixed" data-tap-toggle="false">
+						<!-- <h4>Page footer</h4> -->
+						<div id="tourneySubnav" data-role="navbar" data-iconpos="left">
+							<ul>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="user">Profil</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="bullets">Turniere</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="heart">Vorbereitung</a></li>
+								<li><a href="#dataContent" data-rel="popup" data-position-to="window" data-icon="shop">Pferdemarkt</a></li>
+							</ul>
+						</div>
+					</div>
+                </div>
+				
+            </div>
+			
+			<div id="dataContent" data-role="popup">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<div class="dataHeader" data-role="header">Header</div>
+				<div class="dataContainer" data-role="content">Content</div>
+				<div class="dataFooter" data-role="footer">Footer</div>
+			</div>
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+		
+		<!-- jQuery Scripts -->
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.4.js"></script>
+		<script type="text/javascript" src="js/swiper.jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.pep.js"></script>
+		
+		<!-- Scripts -->
+		<script type="text/javascript" src="js/database.js"></script>
+		
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
